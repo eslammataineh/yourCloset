@@ -19,7 +19,7 @@ class Order extends Component {
       .get("http://localhost:4000/order")
       .then((res) => {
         console.log(res);
-        this.setState({ Orders: res.data });
+        this.setState({ Orders: res.data.reverse() });
       })
       .catch((err) => {
         console.log(err);

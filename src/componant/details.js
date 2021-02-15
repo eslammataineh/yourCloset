@@ -95,7 +95,7 @@ class Details extends Component {
 
       //console.log("buy ittttt" + selectsizeone);
       //let id = this.props.match.params.product_id;
-      axios
+      /* axios
         .post(`http://localhost:4000/useredit`, this.state.Newlength)
         .then((res) => {
           //this.setState({ newlength: res.data });
@@ -105,7 +105,7 @@ class Details extends Component {
         .catch((err) => {
           // console.log("detailsss newlength" + err);
           this.setState({ ErrorMsg: "  could not post newlength" });
-        });
+        }); */
 
       console.log("**************************************");
 
@@ -124,6 +124,11 @@ class Details extends Component {
           // console.log("detailsss order" + err);
           this.setState({ ErrorMsg: "  could not get the order data" });
         });
+
+      this.setState({
+        phone: "",
+        selectsize: "",
+      });
     }
   };
 

@@ -158,7 +158,7 @@ class Admin extends Component {
       this.setState({
         ValidationErr: "name can't be empty",
       });
-      overallresult = false; //^[\.a-zA-Z0-9,!? ]*$
+      overallresult = false; //^[\.a-zA-Z0-9\s,!? ]*$
     } else if (!this.state.name.match(/^[a-zA-Z][A-Za-z\s]*$/)) {
       this.setState({
         ValidationErr: "name must be just letters",
@@ -184,7 +184,7 @@ class Admin extends Component {
         ValidationErr: "description can't be empty",
       });
       overallresult = false;
-    } else if (!this.state.description.match(/^[a-zA-Z][A-Za-z\s]*$/)) {
+    } else if (!this.state.description.match(/^[\.a-zA-Z0-9\s,!? ]*$/)) {
       this.setState({
         ValidationErr: "description must be just letters",
       });

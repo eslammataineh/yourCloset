@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../App";
@@ -25,7 +25,7 @@ const Product = (props) => {
     axios
       .delete(`http://localhost:4000/pants/Delete/${ID}`)
       .then((res) => {
-        console.log("delete  pants" + res);
+        console.log("delete pants" + res);
         getAllPants();
       })
       .catch((err) => {
@@ -65,7 +65,7 @@ const Product = (props) => {
             <Link to={"/details/" + props.ID}>More Details</Link>
           </button>
           &nbsp;
-          {/*  {Auth.Signinuser.isAdmin ? (
+          {Auth.userIsAdmin ? (
             <button
               className="deleted"
               type="submit"
@@ -83,7 +83,7 @@ const Product = (props) => {
             </button>
           ) : (
             <span></span>
-          )} */}
+          )}
         </div>
       </div>
     </div>

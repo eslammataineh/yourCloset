@@ -54,7 +54,7 @@
 }
 
 .blogfluid .blogcon .blogcontent p {
-  background-image: linear-gradient(130deg, #ffee00, #e0a5af, #3a055c);
+  background-image: linear-gradient(130deg, #ffee00, #e0a5af, #522270);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -87,7 +87,7 @@
 
 .blogfluid .blogcon .blogcontent .skintones .skin p {
   padding-bottom: 15px;
-  background-image: linear-gradient(130deg, #f8ea2a 15%, #e0a5af, #3a055c);
+  background-image: linear-gradient(130deg, #f8ea2a 15%, #e0a5af, #68328a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -98,5 +98,87 @@
   background-image: linear-gradient(130deg, #d68ce9, #310231);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.blogfluid .blogcon .blogcontent .trending {
+  background-color: transparent;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.blogfluid .blogcon .blogcontent .trending input {
+  width: 81%;
+  background-color: transparent;
+  border: 3px solid rebeccapurple;
+  border-radius: 50px;
+  outline: none;
+  background-image: linear-gradient(130deg, #f8ea2a 15%, #e0a5af, #5c267e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 7px 25px;
+  color: white;
+  -webkit-transition: border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
+}
+
+.blogfluid .blogcon .blogcontent .trending input:focus {
+  border-color: yellow;
+}
+
+.blogfluid .blogcon .blogcontent .trending button {
+  width: 70px;
+  height: 70px;
+  border: 3px solid rebeccapurple;
+  outline: none;
+  border-radius: 50%;
+  margin-left: 15px;
+  background-color: transparent;
+  background-image: linear-gradient(130deg, #f8ea2a 15%, #e0a5af, #5c267e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 3px;
+  -webkit-transition: border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
+  font-family: "Lovers Quarrel", cursive;
+  font-size: 2.7rem;
+  margin-bottom: 50px;
+}
+
+.blogfluid .blogcon .blogcontent .trending button:hover {
+  border-color: yellow;
+}
+
+.blogfluid .blogcon .blogcontent .trending .trend {
+  margin-top: 50px;
+}
+
+.blogfluid .blogcon .blogcontent .trending .trend .fa-fire-alt {
+  position: relative;
+  left: -50%;
+  top: 85px;
+  font-size: 50px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, darkred), color-stop(#f06a10), to(#f7aa03));
+  background-image: linear-gradient(to top, darkred 50%, #f06a10, #f7aa03);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blogfluid .blogcon .blogcontent .trending .trend .blogs {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 10% 70%, 100% 80%, 10% 30%);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 10% 70%, 5% 30%, 10% 30%);
+  padding: 7px 20px 7px 76px;
+  margin: 25px 0 15px 0;
+  font-family: cursive;
+  border: 2px solid rebeccapurple;
+  background-color: #410b77;
+  border-radius: 50px;
+  -webkit-transition: border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+
+.blogfluid .blogcon .blogcontent .trending .trend .blogs:hover {
+  border-color: yellow;
 }
 /*# sourceMappingURL=blog.css.map */

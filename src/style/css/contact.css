@@ -10,6 +10,12 @@
   margin-top: 150px;
 }
 
+.fluid .cont .errors {
+  font-size: 25px;
+  position: relative;
+  z-index: 4;
+}
+
 .fluid .cont .form {
   -webkit-box-shadow: 0px 0px 25px black;
           box-shadow: 0px 0px 25px black;
@@ -146,5 +152,67 @@
 
 .fluid .cont .form .submitcontact:hover {
   border-color: rgba(255, 255, 0, 0.815);
+}
+
+.fluid .cont .contact {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 50px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  margin-top: 100px;
+}
+
+.fluid .cont .contact .messages {
+  position: relative;
+  z-index: 3;
+  font-family: "Lovers Quarrel", cursive;
+  background-image: linear-gradient(-130deg, #ffee00 10%, #e0a5af, #3a055c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.fluid .cont .contact .invelop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fluid .cont .contact .invelop .fa-envelope-open {
+  background-image: linear-gradient(-130deg, #ffee00, #e0a5af, #3a055c 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.fluid .cont .contact .invelop .contactus {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 50px 10px 20px 30px;
+  background-image: linear-gradient(-130deg, #ffee00 10%, #e0a5af, #3a055c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid rebeccapurple;
+  border-radius: 20px;
+  -webkit-transition: border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
+}
+
+.fluid .cont .contact .invelop .contactus:hover {
+  border-color: yellow;
+}
+
+.fluid .cont .contact .invelop .contactus p {
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=contact.css.map */

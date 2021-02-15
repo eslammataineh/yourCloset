@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./componant/header";
 import Home from "./componant/home";
 import Clothes from "./componant/clothes";
@@ -16,7 +17,6 @@ import Payment from "./componant/payment";
 import Blog from "./componant/blog";
 import Order from "./componant/orders";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React, { useState } from "react";
 
 export const AuthContext = React.createContext();
 

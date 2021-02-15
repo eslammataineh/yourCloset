@@ -22,7 +22,7 @@ class Dresses extends Component {
       .get("http://localhost:4000/dresses")
       .then((res) => {
         console.log(res);
-        this.setState({ Dresses: res.data });
+        this.setState({ Dresses: res.data.reverse() });
       })
       .catch((err) => {
         console.log(err);

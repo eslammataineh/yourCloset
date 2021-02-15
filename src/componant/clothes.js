@@ -21,7 +21,7 @@ class Clothes extends Component {
       .get("http://localhost:4000/clothes")
       .then((res) => {
         console.log(res);
-        this.setState({ Cloth: res.data });
+        this.setState({ Cloth: res.data.reverse() });
       })
       .catch((err) => {
         console.log(err);

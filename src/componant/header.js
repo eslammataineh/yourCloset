@@ -1,16 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "../style/css/header.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../App";
 /*import axios from "axios"; */
 const Header = () => {
   let [Auth, setAuth] = useContext(AuthContext);
-
-  console.log(Auth);
-
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light boot-nav fixed-top ">
+      <nav className="navbar navbar-expand-lg boot-nav fixed-top">
         <div className="container">
           <div className="logo">YC</div>
           <button
@@ -29,60 +26,60 @@ const Header = () => {
             </span>
           </button>
           <div className="collapse navbar-collapse navbarr" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ul">
               <li className="nav-item">
-                <Link className="nav-link" to="/home">
+                <Link className="nav-link linkk" to="/home" id="1">
                   Home
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/clothes">
+                <Link className="nav-link linkk" to="/clothes" id="2">
                   Jackets
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/pants">
+                <Link className="nav-link linkk" to="/pants" id="3">
                   Pants
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dresses">
+                <Link className="nav-link linkk" to="/dresses" id="4">
                   Dresses
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/hijab">
+                <Link className="nav-link linkk" to="/hijab" id="5">
                   Hijab & Scarf
                 </Link>
               </li>
 
-              <li className="about nav-item">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
               <li className="contact nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link linkk" to="/contact" id="7">
                   Contact
                 </Link>
               </li>
-              {/* {Auth.Signinuser.isAdmin ? ( */}
-              <li className="admin nav-item">
-                <Link className="nav-link" to="/admin">
-                  Admin
+              {Auth.userIsAdmin ? (
+                <li className="admin nav-item">
+                  <Link className="nav-link linkk" to="/admin" id="8">
+                    Admin
+                  </Link>
+                </li>
+              ) : null}
+              <li className="basket nav-item">
+                <Link className="nav-link linkk" to="/blog" id="10">
+                  Blog
                 </Link>
               </li>
-              {/* ) : null} */}
               <li className="login nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link linkk" to="/login" id="9">
                   login
                 </Link>
               </li>
 
-              <li className="basket nav-item">
-                <Link className="nav-link" to="/blog">
-                  Blog
+              <li className="about nav-item">
+                <Link className="nav-link linkk" to="/about" id="6">
+                  About
                 </Link>
               </li>
             </ul>

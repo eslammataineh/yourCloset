@@ -1,6 +1,49 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import axios from "axios";
 import "../style/css/blog.css";
+import { AuthContext } from "../App";
 const Blog = () => {
+  let [blogs, setBlog] = useState([]);
+  let [blog, setPost] = useState("");
+  let [Auth, setAuth] = useContext(AuthContext);
+
+  let handelpost = (e) => {
+    setPost({ blog: e.target.value }, console.log(blog));
+  };
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/blog")
+      .then((res) => {
+        console.log(res);
+        setBlog(res.data.reverse());
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const handelsubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:4000/blog", blog)
+      .then((res) => {
+        console.log(res);
+        setPost(res.data);
+        axios
+          .get("http://localhost:4000/blog")
+          .then((res) => {
+            console.log(res);
+            setBlog(res.data.reverse());
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <>
       <div className="container-fluid blogfluid">
@@ -75,6 +118,38 @@ const Blog = () => {
                   contrast nearly enough with dark skin and detract from your
                   outfit, just like people with fair skin shouldn’t wear white.
                 </p>
+              </div>
+            </div>
+            <div className="trending">
+              <h3>Whats new</h3>
+              <br />
+              {Auth.userIsAdmin ? (
+                <div>
+                  <input
+                    type="text"
+                    name="blog"
+                    id="blog"
+                    onChange={handelpost}
+                  />
+                  <button type="submit" onClick={handelsubmit}>
+                    Post
+                  </button>
+                </div>
+              ) : null}
+
+              <div className="trend">
+                {blogs.length ? (
+                  blogs.map((eachblog) => (
+                    <div>
+                      <i class="fas fa-fire-alt"></i>
+                      <div key={eachblog._id} className=" card col-12 blogs">
+                        <p>{eachblog.blog}</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="noblogs">Post new blog</div>
+                )}
               </div>
             </div>
           </div>

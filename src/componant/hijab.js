@@ -21,7 +21,7 @@ class Hijab extends Component {
       .get("http://localhost:4000/Hijab")
       .then((res) => {
         console.log(res);
-        this.setState({ Hijab: res.data });
+        this.setState({ Hijab: res.data.reverse() });
       })
       .catch((err) => {
         console.log(err);
